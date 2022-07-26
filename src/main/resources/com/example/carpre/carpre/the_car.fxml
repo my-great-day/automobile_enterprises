@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carpre.carpre.The_Car">
+   <children>
+      <AnchorPane fx:id="workPaneCar" layoutX="1.0" layoutY="-12.0" prefHeight="412.0" prefWidth="1064.0">
+         <children>
+            <TableView fx:id="tableViewData" layoutY="76.0" prefHeight="363.0" prefWidth="1064.0" style="-fx-background-radius: 25;">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="50.0" text="id" />
+                  <TableColumn fx:id="tip_auto" prefWidth="114.0" text="Тип автомобиля" />
+                  <TableColumn fx:id="marka" prefWidth="72.0" text="Марка" />
+                  <TableColumn fx:id="god_vipusk" prefWidth="97.0" text="Год выпуска" />
+                  <TableColumn fx:id="vin" prefWidth="69.0" text="VIN" />
+                  <TableColumn fx:id="gos_nomer" prefWidth="105.0" text="Гос. номер" />
+                  <TableColumn fx:id="nomer_dvigatel" minWidth="6.0" prefWidth="107.0" text="№ двигателя " />
+                  <TableColumn fx:id="nomer_kuzov" prefWidth="94.0" text="№ кузова" />
+                  <TableColumn fx:id="garantiy" prefWidth="125.0" text="Гарантия (тыс/км)" />
+                  <TableColumn fx:id="stoimost" prefWidth="125.0" text="Стоимость ($)" />
+                  <TableColumn fx:id="marka_topliva" prefWidth="103.0" text="Марка топлива" />
+               </columns>
+            </TableView>
+            <Button fx:id="adddata" layoutX="598.0" layoutY="23.0" mnemonicParsing="false" onAction="#add_data" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="Добавить" />
+            <Button fx:id="deletebtn" layoutX="377.0" layoutY="22.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Удалить" />
+            <Button fx:id="update" layoutX="486.0" layoutY="23.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Обновит" />
+            <Button fx:id="exitBtn" layoutX="1031.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="26.0" style="-fx-background-radius: 10;" text="X" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneAddData" layoutX="413.0" layoutY="2.0" prefHeight="425.0" prefWidth="262.0" style="-fx-background-color: silver; -fx-background-radius: 20;" visible="false">
+         <children>
+            <TextField fx:id="add_tip_auto" layoutX="4.0" layoutY="36.0" prefWidth="236.0" promptText="Тип автомобиля" />
+            <TextField fx:id="add_gos_nomer" layoutX="3.0" layoutY="167.0" prefHeight="23.0" prefWidth="236.0" promptText="Гос. номер" />
+            <TextField fx:id="add_marka" layoutX="4.0" layoutY="69.0" prefHeight="23.0" prefWidth="236.0" promptText="Марка" />
+            <TextField fx:id="add_vin_nomer" layoutX="3.0" layoutY="132.0" prefHeight="23.0" prefWidth="236.0" promptText="VIN" />
+            <Button fx:id="add_data" layoutX="16.0" layoutY="375.0" mnemonicParsing="false" onAction="#add_data_func" prefHeight="30.0" prefWidth="90.0" text="Добавить" />
+            <Button fx:id="cancel_btn" layoutX="136.0" layoutY="374.0" mnemonicParsing="false" onAction="#cancel_func" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
+            <Label layoutX="16.0" layoutY="-1.0" prefHeight="30.0" prefWidth="220.0" text="Добавить автотранспорт">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="add_date_vip" layoutX="5.0" layoutY="98.0" prefHeight="25.0" prefWidth="236.0" promptText="Год выпуска" />
+            <TextField fx:id="add_nomer_dvigatel" layoutX="3.0" layoutY="202.0" prefWidth="236.0" promptText="№ двигателя " />
+            <TextField fx:id="add_nomer_kuzov" layoutX="5.0" layoutY="236.0" prefHeight="23.0" prefWidth="236.0" promptText="№ кузова" />
+            <TextField fx:id="add_garantiya" layoutX="5.0" layoutY="268.0" prefHeight="23.0" prefWidth="236.0" promptText="Гарантия (тыс/км)" />
+            <TextField fx:id="add_stoimost" layoutX="5.0" layoutY="300.0" prefHeight="23.0" prefWidth="236.0" promptText="Стоимость ($)" />
+            <ComboBox fx:id="add_marka_topliva" layoutX="5.0" layoutY="333.0" prefHeight="25.0" prefWidth="236.0" promptText="Марка топлива" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carpre.carpre.MainController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/transport-fever-2-15.jpg" />
+         </image>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="-32.0" layoutY="-5.0" opacity="0.61" prefHeight="587.0" prefWidth="211.0" style="-fx-background-color: silver; -fx-background-radius: 50;">
+         <children>
+            <Button fx:id="theCarDriver" layoutX="43.0" layoutY="147.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 25; -fx-background-color: black;" text="Водители" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="theCars" layoutX="40.0" layoutY="218.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 25; -fx-background-color: black;" text="Автотранспорт" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="exitButton" layoutX="40.0" layoutY="543.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 25; -fx-background-color: black;" text="Выход" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="weybills" layoutX="40.0" layoutY="294.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 25; -fx-background-color: black;" text="Путевые листы" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label layoutX="47.0" layoutY="62.0" prefHeight="30.0" prefWidth="143.0" text="Справочники">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="refueling" layoutX="43.0" layoutY="366.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 25; -fx-background-color: black;" text="Заправка" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="workPaneTest" layoutX="257.0" layoutY="86.0" visible="false">
+         <children>
+            <TableView fx:id="tableViewData" layoutY="79.0" prefHeight="333.0" prefWidth="717.0" style="-fx-background-radius: 25;">
+              <columns>
+                <TableColumn fx:id="idDrive" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="lastNameDrive" prefWidth="89.0" text="Фамилия" />
+                  <TableColumn fx:id="firstNameDrive" prefWidth="86.0" text="Имя" />
+                  <TableColumn fx:id="patronycDrive" prefWidth="83.0" text="Отчество" />
+                  <TableColumn fx:id="birthdayDrive" prefWidth="149.0" text="Дата рождение" />
+                  <TableColumn fx:id="workexDrive" prefWidth="120.0" text="Стаж работы" />
+                  <TableColumn fx:id="categoryDrive" prefWidth="113.0" text="Категория" />
+              </columns>
+            </TableView>
+            <Button fx:id="addDriveButton" layoutX="424.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="Добавить" />
+            <Button fx:id="deleteDataDriverButton" layoutX="203.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Удалить" />
+            <Button fx:id="refButtonDrive" layoutX="312.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Обновит" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addPaneDataDrive" layoutX="496.0" layoutY="98.0" opacity="0.8" prefHeight="388.0" prefWidth="240.0" style="-fx-background-color: silver; -fx-background-radius: 20;" visible="false" AnchorPane.rightAnchor="288.0">
+         <children>
+            <TextField fx:id="addfam" layoutX="3.0" layoutY="59.0" prefWidth="236.0" promptText="Фамилия" />
+            <TextField fx:id="addcat" layoutX="3.0" layoutY="298.0" prefHeight="23.0" prefWidth="236.0" promptText="Категория" />
+            <TextField fx:id="addim" layoutX="3.0" layoutY="106.0" prefHeight="23.0" prefWidth="236.0" promptText="Имя" />
+            <TextField fx:id="addot" layoutX="3.0" layoutY="158.0" prefHeight="23.0" prefWidth="236.0" promptText="Отчество" />
+            <TextField fx:id="addsta" layoutX="3.0" layoutY="254.0" prefHeight="23.0" prefWidth="236.0" promptText="Стаж работы" />
+            <DatePicker fx:id="adddat" layoutX="2.0" layoutY="204.0" prefHeight="21.0" prefWidth="236.0" promptText="Дата рождение" />
+            <Button fx:id="addDriveButtonData" layoutX="15.0" layoutY="344.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Добавить" />
+            <Button fx:id="addCancelDriveButton" layoutX="135.0" layoutY="343.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
+            <Label layoutX="11.0" layoutY="9.0" prefHeight="30.0" prefWidth="211.0" text="Добавить водителя">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

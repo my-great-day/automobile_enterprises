@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carpre.carpre.The_Auto">
+   <children>
+      <AnchorPane fx:id="workPaneCar" layoutX="1.0" layoutY="-12.0" prefHeight="412.0" prefWidth="1064.0">
+         <children>
+            <TableView fx:id="tableViewData1" layoutY="76.0" prefHeight="363.0" prefWidth="1064.0" style="-fx-background-radius: 25;">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="42.0" text="id" />
+                  <TableColumn fx:id="drive" prefWidth="83.0" text="Водители" />
+                  <TableColumn fx:id="date_viezd" prefWidth="95.0" text="Дата выезда" />
+                  <TableColumn fx:id="date_vozv" prefWidth="96.0" text="Дата возврата" />
+                  <TableColumn fx:id="spid_viezd" prefWidth="101.0" text="Спид при выезде" />
+                  <TableColumn fx:id="spid_vozv" prefWidth="90.0" text="Спид при возв" />
+                  <TableColumn fx:id="topl_viezd" minWidth="6.0" prefWidth="107.0" text="Топл при выезд" />
+                  <TableColumn fx:id="topl_vozv" prefWidth="108.0" text="Топл при возв" />
+                  <TableColumn fx:id="mesto" prefWidth="149.0" text="Место назначение" />
+                  <TableColumn fx:id="rastoyanie" prefWidth="97.0" text="Растояние" />
+                  <TableColumn fx:id="massa_gruza" prefWidth="93.0" text="Масса груза" />
+               </columns>
+            </TableView>
+            <Button fx:id="addbtn" layoutX="598.0" layoutY="23.0" mnemonicParsing="false" onAction="#add_funk" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="Добавить" />
+            <Button fx:id="deletebtn" layoutX="377.0" layoutY="22.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Удалить" />
+            <Button fx:id="update" layoutX="486.0" layoutY="23.0" mnemonicParsing="false" onAction="#update_funk" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Обновит" />
+            <Button fx:id="exiit" layoutX="1031.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="26.0" style="-fx-background-radius: 10;" text="X" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_add_pt" layoutX="413.0" layoutY="2.0" prefHeight="425.0" prefWidth="262.0" style="-fx-background-color: silver; -fx-background-radius: 20;" visible="false">
+         <children>
+            <TextField fx:id="adddrive" layoutX="4.0" layoutY="36.0" prefWidth="236.0" promptText="Водители" />
+            <TextField fx:id="add_spid_vozvrata" layoutX="3.0" layoutY="167.0" prefHeight="23.0" prefWidth="236.0" promptText="Спидометр при возврата" />
+            <TextField fx:id="add_spid_viezd" layoutX="3.0" layoutY="132.0" prefHeight="23.0" prefWidth="236.0" promptText="Спидометр при выезда" />
+            <Button fx:id="add_data_btn" layoutX="16.0" layoutY="375.0" mnemonicParsing="false" onAction="#add_data_btn_func" prefHeight="30.0" prefWidth="90.0" text="Добавить" />
+            <Button fx:id="cancel_btn" layoutX="136.0" layoutY="374.0" mnemonicParsing="false" onAction="#cancel_btn_func" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
+            <Label layoutX="16.0" layoutY="-1.0" prefHeight="30.0" prefWidth="211.0" text="Добавить ПТ">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="add_date_vozvrata" layoutX="5.0" layoutY="98.0" prefHeight="25.0" prefWidth="236.0" promptText="Дата возврата" />
+            <TextField fx:id="add_topliva_viezda" layoutX="3.0" layoutY="202.0" prefWidth="236.0" promptText="Топлива при выезда" />
+            <TextField fx:id="add_topliva_vozvrata" layoutX="5.0" layoutY="236.0" prefHeight="23.0" prefWidth="236.0" promptText="Топлива при возврата" />
+            <TextField fx:id="add_mesto" layoutX="5.0" layoutY="268.0" prefHeight="23.0" prefWidth="236.0" promptText="Место назначение" />
+            <TextField fx:id="add_rasstoyanie" layoutX="5.0" layoutY="300.0" prefHeight="23.0" prefWidth="236.0" promptText="Расстояние" />
+            <DatePicker fx:id="add_date_viezd" layoutX="5.0" layoutY="67.0" prefHeight="25.0" prefWidth="236.0" promptText="Дата выезда" />
+            <TextField fx:id="add_massa_gruza" layoutX="5.0" layoutY="334.0" prefHeight="23.0" prefWidth="236.0" promptText="Масса груза" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
